@@ -77,15 +77,15 @@
         </configuration>
       </plugin>
       <!-- prevent deploy: https://stackoverflow.com/questions/25305850/how-to-disable-nexus-staging-maven-plugin-in-sub-modules -->
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <configuration>
-          <!-- prevent deploy of integration test: 'true' does not work as all modules are
-           skipped when the last module is skipped, integration-test is last module -->
-          <skipNexusStagingDeployMojo>false</skipNexusStagingDeployMojo>
-        </configuration>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>org.sonatype.plugins</groupId>-->
+<!--        <artifactId>nexus-staging-maven-plugin</artifactId>-->
+<!--        <configuration>-->
+<!--          &lt;!&ndash; prevent deploy of integration test: 'true' does not work as all modules are-->
+<!--           skipped when the last module is skipped, integration-test is last module &ndash;&gt;-->
+<!--          <skipNexusStagingDeployMojo>false</skipNexusStagingDeployMojo>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
       <plugin>
         <!-- delete the target dirs in the sub projects, not cleaned by default -->
         <artifactId>maven-clean-plugin</artifactId>
